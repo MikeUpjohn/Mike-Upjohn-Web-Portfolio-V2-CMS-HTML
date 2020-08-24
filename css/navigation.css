@@ -1,0 +1,47 @@
+/* navigation css */
+.sidenav {
+	height: 100%;
+	position:fixed;
+	background-color:#303641;
+	width:300px;
+}
+
+.logo {
+	font-size: 2.0em;
+	color:pink;
+	font-family:"Agenda", "Arial", sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin:20px;
+	color: var(--logo-colour);
+}
+
+.menu-item {
+	border-bottom:1px solid #454A54;
+}
+
+.menu-item i {
+	color:var(--menu-link-colour);
+	display: inline-block;
+	margin-left:25px;
+	margin-right:0px;
+	width:15px;
+}
+
+.menu-item a {
+	text-decoration:none;
+	font-size:1.1em;
+	color:var(--menu-link-colour);
+	display:block;
+	margin-left:15px;
+	padding-top:10px;
+	padding-bottom:10px;
+	display:inline-block;
+	width:80%;
+}
+
+.menu-item:hover {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
