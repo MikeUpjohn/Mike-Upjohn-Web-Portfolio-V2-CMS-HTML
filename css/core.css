@@ -7,3 +7,23 @@
 .main {
 	padding-left:315px;
 }
+
+.grey-banner {
+	background-color:#E0E0E0;
+}
+
+.log-out {
+	height:75px;
+}
+
+.log-out a {
+	display:block;
+	padding-top:25px;
+	text-align:right;
+	color:#000000;
+	margin-right:25px;
+}
+
+.log-out a:hover {
+	text-decoration:none;
+}

@@ -40,8 +40,8 @@
 	width:80%;
 }
 
-.menu-item:hover {
-	color: #FFFFFF;
+.menu-item a:hover {
+	color: var(--menu-link-hover-colour);
 	font-weight: bold;
 	text-decoration: none;
 }
