@@ -28,6 +28,21 @@
 	text-decoration:none;
 }
 
+table {
+	width:100%;
+	background-color:#E0E0E0;
+}
+
+table th {
+	border-bottom: 1px solid #AAAAAA;
+	padding:10px;
+	text-align: center;
+}
+
+table td {
+	padding:5px;
+}
+
 /** buttons - may need own stylesheet **/
 .btn-label {
 	position:relative;
