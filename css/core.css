@@ -28,6 +28,11 @@
 	text-decoration:none;
 }
 
+.page-heading {
+	color:#515151;
+	margin-bottom: 40px;
+}
+
 table {
 	width:100%;
 	background-color:#E0E0E0;
@@ -41,6 +46,18 @@ table th {
 
 table td {
 	padding:5px;
+}
+
+table .left {
+	text-align:left;
+}
+
+table .center {
+	text-align:center;
+}
+
+table .right {
+	text-align:right;
 }
 
 /** buttons - may need own stylesheet **/
