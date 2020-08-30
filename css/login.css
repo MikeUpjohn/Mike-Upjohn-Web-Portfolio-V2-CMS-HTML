@@ -1,0 +1,54 @@
+body {
+	background-color:#303641;
+}
+
+.login-panel {
+	background-color:#FFFFFF;
+	max-width:40%;
+	margin-left:auto;
+	margin-right:auto;
+	height:500px;
+	margin-top:170px;
+}
+
+.login-panel h1 {
+	text-align:center;
+	padding-top:1.5em;
+	padding-bottom:0.5em;
+	font-family:"Agenda", "Arial", sans-serif;
+	font-weight:bold;
+}
+
+.login-panel .form-group {
+	max-width:80%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.validation-message {
+	max-width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	margin-bottom:3.0em;
+	font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.btn-login {
+	background-color:#007BFF;
+	width:30%;
+	height:50px;
+	color:#FFFFFF;
+	font-family:"Agenda", "Arial", sans-serif;
+	font-size:1.5em;
+	margin-top:2.0em;
+}
+
+input {
+	font-family:"Agenda", "Arial", sans-serif;
+	font-weight:bold;
+}
+
+.forgotten-password-link {
+	text-align:center;
+}

@@ -1,9 +1,3 @@
-/* my fonts */
-@font-face {
-	font-family: "Agenda";
-	src:url(../fonts/AgendaMedium.ttf);
-}
-
 .main {
 	padding-left:315px;
 }

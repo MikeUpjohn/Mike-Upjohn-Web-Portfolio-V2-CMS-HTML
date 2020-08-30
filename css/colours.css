@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "Agenda";
+	src:url(../fonts/AgendaMedium.ttf);
+}
+
 :root {
 	--logo-colour: #E1D4F1;
 	--menu-link-colour: #AAABAE;
