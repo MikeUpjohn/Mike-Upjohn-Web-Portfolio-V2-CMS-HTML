@@ -7,4 +7,10 @@
 	--logo-colour: #E1D4F1;
 	--menu-link-colour: #AAABAE;
 	--menu-link-hover-colour:#FFFFFF;
+
+	/* Button styles */
+	--submit-button-color: #007BFF;
+	--submit-button-text-colour: #FFFFFF;
+	--submit-button--hover-color: #053E7B;
+	--submit-button-text-colour: #FFFFFF;
 }
