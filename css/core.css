@@ -7,6 +7,7 @@
 }
 
 .log-out {
+	font-family: "Segoe UI", "Arial", sans-serif;
 	height:75px;
 }
 
@@ -23,8 +24,17 @@
 }
 
 .page-heading {
-	color:#515151;
+	color: #515151;
 	margin-bottom: 40px;
+}
+
+.page-heading h1 {
+	font-family: "Agenda", "Arial", sans-serif;
+	font-weight: bold;
+}
+
+.page-heading p {
+	font-family: "Segoe UI", "Arial", sans-serif;
 }
 
 table {

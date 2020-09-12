@@ -1,7 +1,12 @@
 label {
+	font-family:"Segoe UI", "Arial", sans-serif;
 	margin-top:5px;
-	font-weight:normal;
+	font-weight:bold;
 	color: #515151;
+}
+
+input {
+	font-family:"Segoe UI", "Arial", sans-serif;
 }
 
 button.submit {
@@ -18,7 +23,8 @@ button.submit {
 
 	/* Font */
 	font-size:1.3em;
-	font-family:"Agenda", "Arial", sans-serif;
+	font-family: "Segoe UI", "Arial", sans-serif;
+    font-weight: bold;
 	color:var(--submit-button-text-colour);
 }
 
