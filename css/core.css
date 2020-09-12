@@ -65,6 +65,10 @@ table .right {
 }
 
 /* Buttons */
+button:focus {
+	outline: 0px transparent !important;
+}
+
 .btn-label {
 	position:relative;
 	left:-12px;
