@@ -1,9 +1,9 @@
 body {
-	background-color:#303641;
+	background-color: var(--background-color);
 }
 
 .login-panel {
-	background-color:#FFFFFF;
+	background-color: var(--white);
 	max-width:40%;
 	margin-left:auto;
 	margin-right:auto;
@@ -35,10 +35,10 @@ body {
 }
 
 .btn-login {
-	background-color:#007BFF;
+	background-color:var(--submit-button-color);
 	width:30%;
 	height:50px;
-	color:#FFFFFF;
+	color:var(--white);
 	font-family:"Agenda", "Arial", sans-serif;
 	font-size:1.5em;
 	margin-top:2.0em;

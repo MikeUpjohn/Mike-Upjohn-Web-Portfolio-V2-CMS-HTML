@@ -4,9 +4,20 @@
 }
 
 :root {
+	--background-color: #FFFFFF;
 	--logo-colour: #E1D4F1;
 	--menu-link-colour: #AAABAE;
-	--menu-link-hover-colour:#FFFFFF;
+	--menu-link-hover-colour: #FFFFFF;
+	--form-label-colour: #515151;
+
+	/* Standard Colours */
+	--white: #FFFFFF;
+	--black: #000000;
+	--light-grey: #E0E0E0;
+	--dark-grey: #515151;
+
+	/* Table styles */
+	--border-colour:#AAAAAA;
 
 	/* Button styles */
 	--submit-button-color: #007BFF;

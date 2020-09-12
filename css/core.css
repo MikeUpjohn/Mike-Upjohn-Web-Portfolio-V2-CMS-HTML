@@ -3,7 +3,7 @@
 }
 
 .grey-banner {
-	background-color:#E0E0E0;
+	background-color:var(--light-grey);
 }
 
 .log-out {
@@ -15,7 +15,7 @@
 	display:block;
 	padding-top:25px;
 	text-align:right;
-	color:#000000;
+	color:var(--black);
 	margin-right:25px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .page-heading {
-	color: #515151;
+	color: var(--dark-grey);
 	margin-bottom: 40px;
 }
 
@@ -39,11 +39,11 @@
 
 table {
 	width:100%;
-	background-color:#E0E0E0;
+	background-color:var(--light-grey);
 }
 
 table th {
-	border-bottom: 1px solid #AAAAAA;
+	border-bottom: 1px solid var(--border-colour);
 	padding:10px;
 	text-align: center;
 }
@@ -64,7 +64,7 @@ table .right {
 	text-align:right;
 }
 
-/** buttons - may need own stylesheet **/
+/* Buttons */
 .btn-label {
 	position:relative;
 	left:-12px;

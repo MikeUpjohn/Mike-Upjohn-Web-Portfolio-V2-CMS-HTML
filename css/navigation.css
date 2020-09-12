@@ -29,6 +29,7 @@
 }
 
 .menu-item a {
+	font-family: "Segoe UI", "Arial", sans-serif;
 	text-decoration:none;
 	font-size:1.1em;
 	color:var(--menu-link-colour);

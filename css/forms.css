@@ -2,7 +2,7 @@ label {
 	font-family:"Segoe UI", "Arial", sans-serif;
 	margin-top:5px;
 	font-weight:bold;
-	color: #515151;
+	color: var(--form-label-colour);
 }
 
 input {
