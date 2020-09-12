@@ -86,3 +86,7 @@ button:focus {
 .btn {
 	margin-bottom:10px;
 }
+
+.btn-right {
+	float:right;
+}
