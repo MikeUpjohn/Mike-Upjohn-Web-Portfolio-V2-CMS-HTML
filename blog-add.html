@@ -3,11 +3,12 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mike Upjohn - CMS - Tagging</title>
 
 	<link rel="stylesheet" href="_includes/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="_includes/fontawesome-free-5.14.0-web/css/all.min.css">
+	<link rel="stylesheet" href="_includes/jQueryUI/jquery-ui.min.css">
 	<link rel="stylesheet" href="css/colours.css">
 	<link rel="stylesheet" href="css/core.css">
 	<link rel="stylesheet" href="css/navigation.css">
@@ -73,7 +74,14 @@
 										<label for="blog-date">Date</label>
 									</div>
 									<div class="col-lg-8">
-										<input type="text" id="blog-date" name="blog-date" class="form-control" placeholder="Blog Date">
+										<div class="input-group">
+											<input type="text" id="blog-date" name="blog-date" class="form-control" placeholder="Blog Date">
+											<div class="input-group-addon">
+												<span class="input-group-text">
+													<i class="fas fa-calendar-alt"></i>
+												</span>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -138,4 +146,6 @@
 	</div>
 	<script src="_includes/jQuery/jquery-3.5.1.min.js"></script>
 	<script src="_includes/bootstrap/js/bootstrap.min.js"></script>
+	<script src="_includes/jQueryUI/jquery-ui.min.js"></script>
+	<script src="js/core.js"></script>
 </body>
