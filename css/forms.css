@@ -5,7 +5,7 @@ label {
 	color: var(--form-label-colour);
 }
 
-input {
+input, select {
 	font-family:"Segoe UI", "Arial", sans-serif;
 }
 
