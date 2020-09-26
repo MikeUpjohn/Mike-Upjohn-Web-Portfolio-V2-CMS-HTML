@@ -36,3 +36,23 @@ button.submit:hover {
 .form-submit-group {
 	margin-top:50px;
 }
+
+/* Datepicker */
+#ui-datepicker-div {
+	font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.ui-datepicker-calendar td {
+	border:0px;
+	padding:0px;
+	width:33px;
+}
+
+.ui-datepicker-calendar td a {
+	text-align:center;
+}
+
+/* Tags */
+.bootstrap-tagsinput {
+	width:100%;
+}
