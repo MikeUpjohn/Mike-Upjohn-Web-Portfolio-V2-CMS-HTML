@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Mike Upjohn - CMS - Add Blog</title>
+	<title>Mike Upjohn - CMS - Edit Project</title>
 
 	<link rel="stylesheet" href="_includes/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="_includes/fontawesome-free-5.14.0-web/css/all.min.css">
@@ -54,8 +54,8 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-12 page-heading">
-						<h1>Add Blog</h1>
-						<p>Add a new blog here</p>
+						<h1>Edit Project</h1>
+						<p>Edit a project</p>
 					</div>
 				</div>
 				<div class="row">
@@ -64,21 +64,21 @@
 							<div class="form-group">
 								<div class="row">
 									<div class="col-lg-2 col-lg-offset-1">
-										<label for="blog-title">Blog Title</label>
+										<label for="project-title">Project Title</label>
 									</div>
 									<div class="col-lg-8">
-										<input type="text" id="blog-title" name="blog-title" class="form-control" placeholder="Blog Title">
+										<input type="text" id="project-title" name="project-title" class="form-control" placeholder="Project Title">
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="row">
 									<div class="col-lg-2 col-lg-offset-1">
-										<label for="blog-date">Date</label>
+										<label for="project-date">Date</label>
 									</div>
 									<div class="col-lg-8">
 										<div class="input-group">
-											<input type="text" id="blog-date" name="blog-date" class="form-control" placeholder="Blog Date">
+											<input type="text" id="project-date" name="project-date" class="form-control" placeholder="Project Date">
 											<div class="input-group-addon">
 												<span class="input-group-text">
 													<i class="fas fa-calendar-alt"></i>
@@ -120,16 +120,10 @@
 							<div class="form-group">
 								<div class="row">
 									<div class="col-lg-2 col-lg-offset-1">
-										<label for="blog-tags">Tags</label>
+										<label for="blog-tags">Project Link</label>
 									</div>
 									<div class="col-lg-8">
-										<select id="blog-tags" name="blog-tags" class="form-control" placeholder="Tags" multiple="multiple">
-											<option value="1">Project</option>
-											<option value="2">Storm Chase 2017</option>
-											<option value="3">Blogs</option>
-											<option value="4">Storm Chase 2019</option>
-											<option value="5">Monsoon Storm Chase 2019</option>
-										</select>
+										<input type="text" name="project-link" id="project-link" class="form-control" placeholder="http://www.mike-upjohn.co.uk/my-lovely-project" />
 									</div>
 								</div>
 							</div>
@@ -168,5 +162,5 @@
 	<script src="_includes/bootstrap-tags/bootstrap-tagsinput.js"></script>
 	<script src="_includes/fast-select/fastselect.standalone.min.js"></script>
 	<script src="js/core.js"></script>
-	<script src="js/blog.js"></script>
+	<script src="js/projects.js"></script>
 </body>
