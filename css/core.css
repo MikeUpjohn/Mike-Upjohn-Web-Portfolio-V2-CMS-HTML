@@ -39,16 +39,27 @@
 
 table {
 	width:100%;
-	background-color:var(--light-grey);
+	background-color: --var(--background-color);
 }
 
-table th {
-	border-bottom: 1px solid var(--border-colour);
+thead, thead th {
+	background-color:#E0E0E0;
+	border: 1px solid #000000;
+	background-color: --var(--border-colour);
 	padding:10px;
 	text-align: center;
 }
 
-table td {
+tbody {
+	border: 1px dashed #AAAAAA;
+}
+
+tr, td {
+	border: 1px dashed #AAAAAA;
+	border-radius: 3px
+}
+
+td {
 	padding:5px;
 }
 
@@ -62,6 +73,22 @@ table .center {
 
 table .right {
 	text-align:right;
+}
+
+table .narrow {
+	width: 10%;
+}
+
+table .standard {
+	width: 20%;
+}
+
+table .wide {
+	width:40%;
+}
+
+table .checkmark {
+	width:5%;
 }
 
 /* Buttons */
@@ -84,7 +111,8 @@ button:focus {
 }
 
 .btn {
-	margin-bottom:10px;
+	margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .btn-right {
