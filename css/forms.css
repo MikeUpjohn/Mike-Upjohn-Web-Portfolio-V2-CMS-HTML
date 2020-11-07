@@ -9,6 +9,11 @@ input, select {
 	font-family:"Segoe UI", "Arial", sans-serif;
 }
 
+input[type="checkbox"] {
+	width:25px;
+	height:25px;
+}
+
 button.submit {
 	display:block;
 	margin-left:auto;

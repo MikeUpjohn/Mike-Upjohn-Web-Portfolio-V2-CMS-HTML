@@ -1,0 +1,21 @@
+#dropzone-uploader {
+	width:100%;
+	background-color:#C5F0FE;
+	min-height:250px;
+	border: 1px solid #2B303A;
+	text-align:center;
+	height:250px;
+}
+
+#dropzone-uploader:hover {
+	background-color:#86DDFA;
+}
+
+.uploader-text {
+	display:inline-block;
+	text-align:center;
+	font-size:2.0em;
+	font-weight:bold;
+	color:#606060;
+	margin-top:105px;
+}
