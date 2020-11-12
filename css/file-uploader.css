@@ -4,6 +4,7 @@
 	min-height:100px;
 	border: 1px dashed #2B303A;
 	text-align:center;
+	margin-bottom:40px;
 }
 
 #dropzone-uploader i {
@@ -25,30 +26,47 @@
 	margin-top:30px;
 }
 
+.dropzone-previews.hidden {
+	display:none;
+}
+
 /** Image preview CSS **/
 #dropzone-previews {
 	margin-top:10px;
+	background-color: lightgrey;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 
-.dz-image-preview {
-	margin-top:2px;
-	padding-top:5px;
-	padding-bottom: 5px;
+#dropzone-previews .preview img {
+	height:100px;
+	width:150px;
 }
 
-.dz-image-preview .name {
+#dropzone-previews>div {
+	/*margin-top:2px;
+	padding-top:5px;*/
+	padding-bottom: 10px;
+}
+
+#dropzone-previews .full-height {
+	height:100px;
+}
+
+#dropzone-previews .preview .name {
 	margin-top:20px;
 }
 
-.dz-image-preview .size {
+#dropzone-previews .preview .size {
 	font-weight:bold;
 }
 
-.dz-image-preview .progress {
+#dropzone-previews .progress {
 	margin-top:40px;
 }
 
-.dz-image-preview .delete {
+#dropzone-previews .delete {
 	display: block;
     text-align: center;
     margin-top: 40px;

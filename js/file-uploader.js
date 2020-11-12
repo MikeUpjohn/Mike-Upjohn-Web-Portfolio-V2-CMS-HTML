@@ -17,8 +17,15 @@ $(document).ready(function () {
     });
 
     dropzone.on("addedfile", function (file) {
+        if($("#dropzone-previews").hasClass('hidden')) {
+            $("#dropzone-previews").removeClass('hidden');
+        }
+
         file.previewElement.querySelector(".delete").onclick = function () {
             dropzone.removeFile(file);
+            if($('#dropzone-previews').children().length === 0) {
+                $("#dropzone-previews").addClass('hidden');
+            }
         };
     });
 
