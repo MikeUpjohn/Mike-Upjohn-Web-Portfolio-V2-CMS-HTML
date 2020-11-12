@@ -1,41 +1,40 @@
 $(document).ready(function () {
-    var myDropzone = new Dropzone("#file-uploader", {
+    var dropzone = new Dropzone("#dropzone-uploader", {
         url: "http://s3trials.localhost/Home/Save/",
         previewsContainer: "#dropzone-previews",
         previewTemplate: $("#template").html(),
-        thumbnailWidth: 100,
+        thumbnailWidth: 175,
         thumbnailHeight: 100,
         autoProcessQueue: false,
+        autoQueue: false,
+        maxFilesize: 1024,
+        timeout: 600000,
+        uploadMultiple: false,
+        parallelUploads: 0,
         headers: {
-            /*"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",*/
             "Access-Control-Allow-Origin": "http://mike-upjohn.cms.localhost"
         }
     });
 
-    myDropzone.on("addedfile", function (file) {
-        console.log("Added file: " + file);
+    dropzone.on("addedfile", function (file) {
+        file.previewElement.querySelector(".delete").onclick = function () {
+            dropzone.removeFile(file);
+        };
     });
 
-    myDropzone.on("totaluploadprogress", function (progress) {
-        console.log("Total Upload Progress: " + progress + "%");
-    });
-
-    myDropzone.on("sending", function (file) {
-        console.log("Sending: " + file);
-    });
-
-    myDropzone.on("queuecomplete", function (progress) {
-        console.log("Queue Complete: " + progress);
+    dropzone.on("totaluploadprogress", function (progress) {
+        console.log(progress + "%");
+        document.querySelector(".progress-bar").style.width = progress + "%";
     });
 
     $("#actions .start").click(function(e) {
         e.preventDefault();
-        myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
-        myDropzone.processFiles(myDropzone.getFilesWithStatus(Dropzone.QUEUED));
+        dropzone.enqueueFiles(dropzone.getFilesWithStatus(Dropzone.ADDED));
+        dropzone.processFiles(dropzone.getFilesWithStatus(Dropzone.QUEUED));
     });
 
     $("#actions .cancel").click(function(e) {
         e.preventDefault();
-        myDropzone.removeAllFiles(true);
+        dropzone.removeAllFiles(true);
     });
 });
