@@ -33,7 +33,7 @@
 /** Image preview CSS **/
 #dropzone-previews {
 	margin-top:10px;
-	background-color: lightgrey;
+	background-color: var(--light-grey);
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
@@ -45,8 +45,6 @@
 }
 
 #dropzone-previews>div {
-	/*margin-top:2px;
-	padding-top:5px;*/
 	padding-bottom: 10px;
 }
 
@@ -74,4 +72,8 @@
 
 #template {
 	display:none;
+}
+
+#actions {
+	text-align: right;
 }

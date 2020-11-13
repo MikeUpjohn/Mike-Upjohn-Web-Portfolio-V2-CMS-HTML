@@ -17,20 +17,18 @@ $(document).ready(function () {
     });
 
     dropzone.on("addedfile", function (file) {
-        if($("#dropzone-previews").hasClass('hidden')) {
-            $("#dropzone-previews").removeClass('hidden');
-        }
+        showElement($("#dropzone-previews"));
+        showElement($("#actions"));
 
         file.previewElement.querySelector(".delete").onclick = function () {
             dropzone.removeFile(file);
-            if($('#dropzone-previews').children().length === 0) {
-                $("#dropzone-previews").addClass('hidden');
-            }
+            
+            hideElement($("#dropzone-previews"));
+            hideElement($("#actions"));
         };
     });
 
     dropzone.on("totaluploadprogress", function (progress) {
-        console.log(progress + "%");
         document.querySelector(".progress-bar").style.width = progress + "%";
     });
 
@@ -45,3 +43,15 @@ $(document).ready(function () {
         dropzone.removeAllFiles(true);
     });
 });
+
+function hideElement(element) {
+    if(element.children().length === 0) {
+        element.addClass('hidden');
+    }
+}
+
+function showElement(element) {
+    if(element.hasClass('hidden')) {
+        element.removeClass('hidden');
+    }
+}
