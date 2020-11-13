@@ -1,5 +1,6 @@
 .main {
 	padding-left:315px;
+	z-index:-1;
 }
 
 .grey-banner {

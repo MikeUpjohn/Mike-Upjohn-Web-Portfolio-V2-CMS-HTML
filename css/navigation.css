@@ -20,7 +20,6 @@
 }
 
 .menu-item i {
-	color:var(--menu-link-colour);
 	display: inline-block;
 	margin-left:25px;
 	margin-right:0px;
@@ -33,11 +32,16 @@
 	font-size:1.1em;
 	color:var(--menu-link-colour);
 	display:block;
-	margin-left:15px;
 	padding-top:10px;
 	padding-bottom:10px;
 	display:inline-block;
 	width:80%;
+	color:var(--menu-link-colour);
+	transition: color 500ms ease, font-weight 500ms ease;
+}
+
+.menu-item a span {
+	margin-left:15px;
 }
 
 .menu-item a:hover {
