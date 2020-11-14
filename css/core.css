@@ -37,6 +37,11 @@
 	font-family: "Segoe UI", "Arial", sans-serif;
 }
 
+h2, h3, h4, h5, h6 {
+	font-family: "Agenda", "Arial", sans-serif;
+	font-weight: bold;
+}
+
 table {
 	width:100%;
 	background-color: --var(--background-color);
