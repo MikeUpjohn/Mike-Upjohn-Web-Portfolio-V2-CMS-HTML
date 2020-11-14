@@ -2,7 +2,7 @@
 .sidenav {
 	height: 100%;
 	position:fixed;
-	background-color:#303641;
+	background-color:var(--sidenav-background-colour);
 	width:300px;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .menu-item {
-	border-bottom:1px solid #454A54;
+	border-bottom:1px solid var(--sidenav-menu-item-border);
 }
 
 .menu-item i {

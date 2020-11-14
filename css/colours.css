@@ -5,10 +5,14 @@
 
 :root {
 	--background-color: #FFFFFF;
+	--form-label-colour: #515151;
+
+	/* Sidenav */
+	--sidenav-background-colour: #303641;
+	--sidenav-menu-item-border:#454A54;
 	--logo-colour: #E1D4F1;
 	--menu-link-colour: #AAABAE;
 	--menu-link-hover-colour: #FFFFFF;
-	--form-label-colour: #515151;
 
 	/* Standard Colours */
 	--white: #FFFFFF;
@@ -17,11 +21,18 @@
 	--dark-grey: #515151;
 
 	/* Table styles */
-	--border-colour:#AAAAAA;
+	--table-border-colour:#AAAAAA;
+	--table-delete:#333333;
 
 	/* Button styles */
 	--submit-button-color: #007BFF;
 	--submit-button-text-colour: #FFFFFF;
 	--submit-button--hover-color: #053E7B;
 	--submit-button-text-colour: #FFFFFF;
+
+	/* File Uploaders */
+	--dropzone-background: #C5F0FE;
+	--dropzone-background-hover: #86DDFA;
+	--dropzone-border: #2B303A;
+
 }
