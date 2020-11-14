@@ -40,12 +40,13 @@
 table {
 	width:100%;
 	background-color: --var(--background-color);
+	border: 1px solid;
+	border-color: --var(--black);
 }
 
 thead, thead th {
 	background-color:#E0E0E0;
 	border: 1px solid #000000;
-	background-color: --var(--border-colour);
 	padding:10px;
 	text-align: center;
 }
@@ -89,6 +90,14 @@ table .wide {
 
 table .checkmark {
 	width:5%;
+}
+
+table .delete {
+	color: --var(--black);
+}
+
+table a.delete {
+	color: #333333;
 }
 
 /* Buttons */

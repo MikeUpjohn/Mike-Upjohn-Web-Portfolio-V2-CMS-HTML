@@ -77,3 +77,8 @@
 #actions {
 	text-align: right;
 }
+
+/** Uploaded Files Table **/
+#uploaded-files {
+	margin-bottom:25px;
+}
