@@ -120,6 +120,10 @@ button:focus {
     margin-top: 5px;
 }
 
+.btn i {
+	margin-right:5px;
+}
+
 .btn-right {
 	float:right;
 }
