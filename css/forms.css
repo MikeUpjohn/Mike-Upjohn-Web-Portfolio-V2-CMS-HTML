@@ -14,6 +14,10 @@ input[type="checkbox"] {
 	height:25px;
 }
 
+.form-control {
+	font-size:14px;
+}
+
 button.submit {
 	display:block;
 	margin-left:auto;
