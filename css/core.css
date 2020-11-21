@@ -38,10 +38,15 @@ body {
 	font-family: "Segoe UI", "Arial", sans-serif;
 }
 
+h1 {
+	font-size:36px;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Agenda", "Arial", sans-serif;
 	font-weight: bold;
 	color: var(--dark-grey);
+	margin-top:20px;
 }
 
 table {
