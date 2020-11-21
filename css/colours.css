@@ -35,4 +35,6 @@
 	--dropzone-background-hover: #86DDFA;
 	--dropzone-border: #2B303A;
 
+	/* Forms */
+	--form-control-placeholder: #555555;
 }

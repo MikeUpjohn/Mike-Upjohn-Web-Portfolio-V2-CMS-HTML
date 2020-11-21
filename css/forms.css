@@ -16,6 +16,7 @@ input[type="checkbox"] {
 
 .form-control {
 	font-size:14px;
+	color: var(--form-control-placeholder);
 }
 
 button.submit {
