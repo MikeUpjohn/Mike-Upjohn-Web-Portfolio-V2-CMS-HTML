@@ -43,6 +43,10 @@ button.submit:hover {
 	border: 1px solid var(--submit-button--hover-color);
 }
 
+button.right {
+	text-align:right;
+}
+
 .form-submit-group {
 	margin-top:50px;
 }
