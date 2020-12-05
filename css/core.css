@@ -87,6 +87,10 @@ table .right {
 	text-align:right;
 }
 
+table .very-narrow {
+	width:5%;
+}
+
 table .narrow {
 	width: 10%;
 }
