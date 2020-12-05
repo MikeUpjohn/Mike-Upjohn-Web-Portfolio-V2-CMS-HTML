@@ -1,0 +1,29 @@
+#route-map-area {
+	display:block;
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	background:rgba(0,0,0,0.8);
+}
+
+#route-map {
+	height:200px;
+	width:100%;
+	background-color:red;
+}
+
+.close-map {
+	width:100%;
+}
+
+#route-map-close {
+	margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float:right;
+	font-size:2.0em;
+	display: inline-block;
+
+	color: var(--white);
+}

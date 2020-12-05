@@ -19,6 +19,10 @@ input[type="checkbox"] {
 	color: var(--form-control-placeholder);
 }
 
+.standard-checkbox {
+	margin-left:0px;
+}
+
 button.submit {
 	display:block;
 	margin-left:auto;
