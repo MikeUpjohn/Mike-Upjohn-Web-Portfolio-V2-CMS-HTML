@@ -1,4 +1,5 @@
-var defaultFadeIn = 500;
+let defaultFadeIn = 500;
+let closeButtonHeight = 82;
 
 $(document).ready(function() {
 	if($("#route-map-area").length > 0) {
@@ -27,5 +28,5 @@ function closeMap() {
 }
 
 function initialiseMap() {
-	
+
 }
