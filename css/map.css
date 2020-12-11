@@ -13,6 +13,10 @@
 	background-color:red;
 }
 
+#route-map .btn {
+	margin-top:0px;
+}
+
 .close-map {
 	width:100%;
 	height:82px;
@@ -27,4 +31,28 @@
 	display: inline-block;
 
 	color: var(--white);
+}
+
+#route-waypoints {
+	background-color:var(--white);
+}
+
+#route-waypoints .route-waypoints-list {
+	list-style:none;
+}
+
+#route-waypoints .route-waypoints-list li span {
+	width:320px;
+	display:inline-block;
+	margin-left:20px;
+}
+
+#route-waypoints input {
+	max-width:100%;
+	border: 1px solid var(--dark-grey);
+}
+
+/**  Temp   **/
+#map-area, #route-waypoints, #route-markers {
+	border: 1px solid black;
 }
