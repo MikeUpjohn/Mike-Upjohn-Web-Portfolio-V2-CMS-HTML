@@ -35,6 +35,11 @@ $(document).ready(function() {
 		$(".route-waypoints-list").sortable({
 			handle: ".drag-handle"
 		});
+
+		$("#route-marker-add").click(function(e) {
+			e.preventDefault();
+			$("#route-marker-modal").fadeIn();
+		});
 	}
 });
 
