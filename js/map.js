@@ -17,28 +17,44 @@ $(document).ready(function() {
 			openMap();
 		});
 
+		// Close button click handler
 		$("#route-map-close").click(function(e) {
 			e.preventDefault();
 			closeMap();
 		});
 
+		// Route waypoint add button click handler
 		$("#route-waypoint-add").click(function(e) {
 			e.preventDefault();
 			console.log("clicked add route waypoint");
 		});
 
+		// Route waypoints delete click handler
 		$(".route-waypoints-list li .delete").click(function(e) {
 			e.preventDefault();
-			console.log("clicked delete");
+			console.log("clicked route waypoint delete");
 		});
 
+		// Route waypoints drag and drop handler
 		$(".route-waypoints-list").sortable({
 			handle: ".drag-handle"
 		});
 
+		// Route marker add button click handler
 		$("#route-marker-add").click(function(e) {
 			e.preventDefault();
 			$("#route-marker-modal").fadeIn();
+		});
+
+		// Router marker delete click handler
+		$(".route-markers-list li .delete").click(function(e) {
+			e.preventDefault();
+			console.log("clicked route marker delete");
+		});
+
+		// Route marker drag and drop handler
+		$(".route-markers-list").sortable({
+			handle: ".drag-handle"
 		});
 	}
 });

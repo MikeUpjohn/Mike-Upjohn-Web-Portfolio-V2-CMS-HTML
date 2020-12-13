@@ -128,6 +128,9 @@
 								</div>
 							</div>
 							<button type="button" class="btn btn-primary btn-lg submit" id="open-map-editor">Open the map</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+							  Launch demo modal
+							</button>
 							<div class="form-group form-submit-group">
 								<div class="row justify-content-center">
 									<div class="col-lg-12">
@@ -140,6 +143,173 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="modal fade route-map-area" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-fw" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Edit Route</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div id="route-map">
+						<div class="row justify-content-center">
+							<div class="col-lg-9">
+								<div id="map-area">
+									1
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="row justify-content-center">
+									<div class="col-lg-12">
+										<div id="route-waypoints">
+											<h3>Route Waypoints</h3>
+											<p>Drag, reorder and add new waypoints</p>
+											<ul class="route-waypoints-list">
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>32.853350814049826, -97.05229639641168</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>33.22966239269321, -98.14584484551459</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>33.78592398075339, -98.2083201656606</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>33.889508163353455, -98.4301078670036</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>34.57788565452161, -98.38840358020855</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>34.7223748174115, -98.40386094050531</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>35.053039559921196, -97.9322196301751</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+											</ul>
+											<form id="add-waypoint">
+												<div class="row justify-content-center">
+													<div class="col-lg-1"></div>
+													<div class="col-lg-4">
+														<input type="text" class="form-control-sm" id="latitude" name="latitude" placeholder="Latitude" required />
+													</div>
+													<div class="col-lg-4">
+														<input type="text" class="form-control-sm" id="longitude" name="longitude" placeholder="Longitude" required />
+													</div>
+													<div class="col-lg-3">
+														<button type="button" class="btn btn-success" id="route-waypoint-add"><i class="fas fa-plus"></i>Add</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<div id="route-markers">
+											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add-route-waymarker"><i class="fas fa-plus"></i>Add</button>
+												<h3>Route Markers</h3>
+												<p>Drag, reorder and add new markers to the map</p>
+												<ul class="route-markers-list">
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>32.853350814049826, -97.05229639641168</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>33.22966239269321, -98.14584484551459</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>33.78592398075339, -98.2083201656606</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>33.889508163353455, -98.4301078670036</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>34.57788565452161, -98.38840358020855</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>34.7223748174115, -98.40386094050531</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.053039559921196, -97.9322196301751</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+												</ul>
+												
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
 	</div>
 	<div id="route-map-area" style="display:none;">
 		<div class="container-fluid">
@@ -259,7 +429,7 @@
 		</div>
 	</div>-->
 	<div class="modal fade" id="add-route-waymarker" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <h5 class="modal-title" id="modal-label">Modal title</h5>
@@ -268,7 +438,20 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	        ...
+	        <form id="add-waypoint">
+				<div class="row justify-content-center">
+					<div class="col-lg-1"></div>
+					<div class="col-lg-4">
+						<input type="text" class="form-control-sm" id="latitude" name="latitude" placeholder="Latitude" required />
+					</div>
+					<div class="col-lg-4">
+						<input type="text" class="form-control-sm" id="longitude" name="longitude" placeholder="Longitude" required />
+					</div>
+					<div class="col-lg-3">
+						<button type="button" class="btn btn-success" id="route-waypoint-add"><i class="fas fa-plus"></i>Add</button>
+					</div>
+				</div>
+			</form>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
