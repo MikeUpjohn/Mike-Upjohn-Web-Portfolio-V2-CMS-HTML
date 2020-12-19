@@ -127,9 +127,9 @@
 									</div>
 								</div>
 							</div>
-							<button type="button" class="btn btn-primary btn-lg submit" id="open-map-editor">Open the map</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-							  Launch demo modal
+							<!--<button type="button" class="btn btn-primary btn-lg submit" id="open-map-editor">Open the map</button>-->
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#route-map-area">
+							  Open the map to edit
 							</button>
 							<div class="form-group form-submit-group">
 								<div class="row justify-content-center">
@@ -144,11 +144,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal fade route-map-area" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade route-map-area" id="route-map-area" tabindex="-1" role="dialog" aria-labelledby="map-editor-label" aria-hidden="true">
 	  <div class="modal-dialog modal-fw" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLabel">Edit Route</h5>
+	        <h5 class="modal-title" id="map-editor-label">Edit Route</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
@@ -160,7 +160,7 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-9">
 								<div id="map-area">
-									1
+									<img src="https://via.placeholder.com/1392x721" />
 								</div>
 							</div>
 							<div class="col-lg-3">
@@ -240,7 +240,6 @@
 								<div class="row">
 									<div class="col-lg-12">
 										<div id="route-markers">
-											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add-route-waymarker"><i class="fas fa-plus"></i>Add</button>
 												<h3>Route Markers</h3>
 												<p>Drag, reorder and add new markers to the map</p>
 												<ul class="route-markers-list">
@@ -294,24 +293,34 @@
 											   			</a>
 													</li>
 												</ul>
-												
+												<form id="add-waymarker">
+													<div class="row justify-content-center">
+														<div class="col-lg-9"></div>
+														<div class="col-lg-3">
+															<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add-route-waymarker">
+																<i class="fas fa-plus"></i>
+																Add
+															</button>
+														</div>
+													</div>
+												</form>
 											</div>
-									</div>
+										</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
 	      </div>
 	    </div>
 	  </div>
 	</div>
-	<div id="route-map-area" style="display:none;">
+	<!--<div id="route-map-area" style="display:none;">
 		<div class="container-fluid">
 			<div class="row justify-content-center">
 		        <div class="close-map">
@@ -416,7 +425,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<!--<div id="route-marker-modal" class="modal" style="display:none;">
 		<div class="row justify-content-center">
 			<a href="#"><i class="fas fa-times close-modal"></i></a>

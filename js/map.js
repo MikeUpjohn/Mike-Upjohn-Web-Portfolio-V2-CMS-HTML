@@ -3,7 +3,7 @@ let closeButtonHeight = 82;
 
 $(document).ready(function() {
 	if($("#route-map-area").length > 0) {
-		var mapHeight = $(window).height() - $(".close-map").height() - 20;
+		var mapHeight = $(window).height() - 216; // Arbitrary number to account for the header, footer and padding.
 
 		$("#route-map-area").height($(window).height());
 		$("#route-map").height(mapHeight);
