@@ -12,8 +12,17 @@
 
 #route-waypoints, #route-markers {
 	background-color:var(--white);
-	overflow-x:hidden;
-	overflow-y:scroll;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+#route-waypoints h3, #route-markers h3 {
+	margin-top:0px;
+	margin-left:10px;
+}
+
+#route-waypoints p, #route-markers p {
+	margin-left:10px;
 }
 
 #route-waypoints .route-waypoints-list, #route-markers .route-markers-list {
@@ -21,7 +30,7 @@
 }
 
 #route-waypoints .route-waypoints-list li span, #route-markers .route-markers-list li span  {
-	width:320px;
+	width:310px;
 	display:inline-block;
 	margin-left:20px;
 }
@@ -34,4 +43,9 @@
 /**  Temp   **/
 #route-waypoints, #route-markers {
 	border: 1px solid black;
+}
+
+/* Override the mCustomScrollbar background rail */
+.mCSB_draggerRail {
+	background-color: var(--white) !important;
 }
