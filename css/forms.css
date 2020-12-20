@@ -47,6 +47,10 @@ button.submit:hover {
 	border: 1px solid var(--submit-button--hover-color);
 }
 
+button.wide {
+	width:350px;
+}
+
 button.right {
 	text-align:right;
 }
