@@ -415,7 +415,7 @@
 													<div class="row justify-content-center">
 														<div class="col-lg-9"></div>
 														<div class="col-lg-3">
-															<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add-route-waymarker">
+															<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add-route-marker">
 																<i class="fas fa-plus"></i>
 																Add
 															</button>
@@ -555,31 +555,68 @@
 			</div>
 		</div>
 	</div>-->
-	<div class="modal fade" id="add-route-waymarker" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal fade" id="add-route-marker" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="modal-label">Modal title</h5>
+	        <h5 class="modal-title" id="modal-label">Add New Marker</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	        <form id="add-waypoint">
-				<div class="row justify-content-center">
-					<div class="col-lg-1"></div>
-					<div class="col-lg-4">
-						<input type="text" class="form-control-sm" id="latitude" name="latitude" placeholder="Latitude" required />
-					</div>
-					<div class="col-lg-4">
-						<input type="text" class="form-control-sm" id="longitude" name="longitude" placeholder="Longitude" required />
-					</div>
-					<div class="col-lg-3">
-						<button type="button" class="btn btn-success" id="route-waypoint-add"><i class="fas fa-plus"></i>Add</button>
-					</div>
-				</div>
-			</form>
-	      </div>
+	      	<div class="container-fluid">
+		        <form id="add-marker">
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="title">Title</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="text" class="form-control" id="title" name="title" placeholder="Title" required />
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="title">Text</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<textarea name="add-marker-editor" id="add-marker-editor" rows="10" cols="80">Add some content here</textarea>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="latitude">Latitude</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="number" class="form-control" id="latitude" name="latitude" placeholder="Latitude" required />
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="longitude">Longitude</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="number" class="form-control" id="longitude" name="longitude" placeholder="Longitude" required />
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group form-submit-group">
+		        		<div class="row justify-content-center">
+							<div class="col-lg-3">
+								<button type="button" class="btn btn-success" id="route-waypoint-add"><i class="fas fa-plus"></i>Add</button>
+							</div>
+						</div>
+		        	</div>
+				</form>
+		      </div>
+	  </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	        <button type="button" class="btn btn-primary">Save changes</button>

@@ -35,7 +35,7 @@
 	margin-left:20px;
 }
 
-#route-waypoints input {
+#route-waypoints input, #add-route-marker input {
 	max-width:100%;
 	border: 1px solid var(--dark-grey);
 }

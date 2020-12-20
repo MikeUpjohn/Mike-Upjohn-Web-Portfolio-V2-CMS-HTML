@@ -21,7 +21,6 @@ $(document).ready(function() {
 			});
 		}
 
-
 		var mapHeight = $(window).height() - 216; // Arbitrary number to account for the header, footer and padding.
 
 		$("#route-map-area").height($(window).height());
@@ -78,6 +77,11 @@ $(document).ready(function() {
 		$(".route-markers-list").sortable({
 			handle: ".drag-handle"
 		});
+
+		//CKEDITOR for Add New Marker page
+		if($("#add-marker-editor").length > 0) {
+			setupCKEditor("add-marker-editor");
+		}
 	}
 });
 
