@@ -30,7 +30,7 @@
 }
 
 #route-waypoints .route-waypoints-list li span, #route-markers .route-markers-list li span  {
-	width:310px;
+	width:200px;
 	display:inline-block;
 	margin-left:20px;
 }

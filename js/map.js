@@ -4,6 +4,10 @@ let closeButtonHeight = 82;
 $(document).ready(function() {
 	if($("#route-map-area").length > 0) {
 		
+		$(".modal-backdrop").click(function(e) {
+			e.preventDefault();
+		});
+
 		// Set these up first, then control height after scrollbars created
 		if($("#route-waypoints").length > 0) {
 			$("#route-waypoints").mCustomScrollbar({
