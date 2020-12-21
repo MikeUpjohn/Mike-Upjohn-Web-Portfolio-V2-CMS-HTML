@@ -82,6 +82,17 @@ $(document).ready(function() {
 		if($("#add-marker-editor").length > 0) {
 			setupCKEditor("add-marker-editor");
 		}
+
+		if($("#route-map-colour").length > 0) {
+			var colorPicker = new iro.ColorPicker('#route-map-colour', {
+				width:200,
+				id: 'mike-test'
+			});
+
+			colorPicker.on('color:change', function(color) {
+				console.log(color.hexString);
+			});
+		}
 	}
 });
 
