@@ -26,23 +26,8 @@ $(document).ready(function() {
 		$("#route-map-area").height($(window).height());
 		$("#route-map").height(mapHeight);
 		$("#map-area").height(mapHeight);
-		/*$("#route-waypoints").height(mapHeight / 2);
-		$("#route-markers").height(mapHeight / 2);*/
 		$("#route-waypoints").css("height", mapHeight / 2 + "px");
 		$("#route-markers").css("height", mapHeight / 2 + "px");
-
-
-		$("#open-map-editor").click(function(e) {
-			e.preventDefault();
-			// initialiseMap();
-			openMap();
-		});
-
-		// Close button click handler
-		$("#route-map-close").click(function(e) {
-			e.preventDefault();
-			closeMap();
-		});
 
 		// Route waypoint add button click handler
 		$("#route-waypoint-add").click(function(e) {
@@ -93,17 +78,25 @@ $(document).ready(function() {
 				console.log(color.hexString);
 			});
 		}
+
+		$("#route-map-area").on('shown.bs.modal', function(e) {
+			console.log("modal shown");
+			initialiseMap();
+		});
 	}
 });
 
-function openMap() {
-	$("#route-map-area").fadeIn(defaultFadeIn);
-}
-
-function closeMap() {
-	$("#route-map-area").fadeOut(defaultFadeIn);
-}
-
 function initialiseMap() {
-
+	let map = $("#map-area");
+	if(map.data('loaded') == false) {
+		mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZXVwam9obiIsImEiOiJjazk2enRjbHQwODB5M2xtanB6bGtoOW9zIn0.QKZt26yxRxYmzMa6i1RkYQ';
+		map = new mapboxgl.Map({
+			container: 'map-area',
+			style: 'mapbox://styles/mapbox/streets-v11',
+			center: [-97.008434, 32.835795], // TODO: Make this dynamic...
+			zoom: 6
+		});
+		
+		map.data('loaded', true);
+	}
 }

@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="css/forms.css">
 	<link rel="stylesheet" href="css/map.css">
 	<link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" />
 </head>
 <body>
 	<div class="container-fluid">
@@ -178,8 +179,7 @@
 					<div id="route-map">
 						<div class="row justify-content-center">
 							<div class="col-lg-9">
-								<div id="map-area">
-									<img src="https://via.placeholder.com/1392x721" />
+								<div id="map-area" data-loaded="false">
 								</div>
 							</div>
 							<div class="col-lg-3">
@@ -638,6 +638,7 @@
 	<script src="_includes/fast-select/fastselect.standalone.min.js"></script>
 	<script src="_includes/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="_includes/colorpicker/iro.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
 	<script src="js/core.js"></script>
 	<script src="js/modals.js"></script>
 	<script src="js/map.js"></script>
