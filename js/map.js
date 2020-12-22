@@ -34,10 +34,10 @@ $(document).ready(function() {
 		$("#route-markers").css("height", mapHeight / 2 + "px");
 
 		// Route waypoint add button click handler
-		$("#route-waypoint-add").click(function(e) {
+		/*$("#route-waypoint-add").click(function(e) {
 			e.preventDefault();
 			console.log("clicked add route waypoint");
-		});
+		});*/
 
 		// Route waypoints delete click handler
 		$(".route-waypoints-list li .delete").click(function(e) {
