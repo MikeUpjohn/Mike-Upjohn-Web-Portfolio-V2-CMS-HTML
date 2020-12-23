@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mike Upjohn - CMS - Edit Route</title>
+
+	<link rel="stylesheet" href="_includes/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="_includes/fontawesome-free-5.14.0-web/css/all.min.css">
+	<link rel="stylesheet" href="_includes/jQueryUI/jquery-ui.min.css">
+	<link rel="stylesheet" href="_includes/bootstrap-tags/bootstrap-tagsinput.css">
+	<link rel="stylesheet" href="_includes/fast-select/fastselect.min.css">
+	<link rel="stylesheet" href="_includes/mCustomScrollbar/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/colours.css">
+	<link rel="stylesheet" href="css/core.css">
+	<link rel="stylesheet" href="css/navigation.css">
+	<link rel="stylesheet" href="css/forms.css">
+	<link rel="stylesheet" href="css/map.css">
+	<link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" />
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div id="side-nav" class="sidenav">
+				<div class="logo">
+					Mike Upjohn CMS
+				</div>
+				<div class="menu-item">
+					<i class="fas fa-home"></i>
+					<a href="#">Home</a>
+				</div>
+				<div class="menu-item">
+					<i class="far fa-file-alt"></i>
+					<a href="#">Projects</a>
+				</div>
+				<div class="menu-item">
+					<i class="far fa-file-alt"></i>
+					<a href="#">Blogs</a>
+				</div>
+				<div class="menu-item">
+					<i class="fas fa-cog"></i>
+					<a href="#">Admin &amp; Settings</a>
+				</div>
+			</div>
+			<div class="col-lg-12 main">
+				<div class="row">
+					<div class="col-lg-12 grey-banner">
+						<div class="log-out">
+							<a href="#">
+								Log Out
+								<i class="fas fa-long-arrow-alt-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 page-heading">
+						<h1>Edit Route</h1>
+						<p>Edit a route map here</p>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-lg-10">
+						<form>
+							<div class="form-group">
+								<div class="row justify-content-center">
+									<div class="col-lg-2 col-lg-offset-1">
+										<label for="route-title">Route Title</label>
+									</div>
+									<div class="col-lg-8">
+										<input type="text" id="route-title" name="route-title" class="form-control" placeholder="Route Title">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row justify-content-center">
+									<div class="col-lg-2">
+										<label for="route-date">Date</label>
+									</div>
+									<div class="col-lg-8">
+										<div class="input-group">
+											<input type="text" id="route-date" name="route-date" class="form-control" placeholder="Route Date">
+											<div class="input-group-append">
+												<span class="input-group-text">
+													<i class="fas fa-calendar-alt"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row justify-content-center">
+									<div class="col-lg-2">
+										<label for="chase">Chase</label>
+									</div>
+									<div class="col-lg-3">
+										<div class="input-group">
+											<select id="chase" name="chase" class="form-control" placeholder="Don't know if this works...">
+												<option>Please Select</option>
+												<option>Tornado Alley</option>
+												<option>Northern Plains</option>
+												<option>Arizona</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-2"></div>
+									<div class="col-lg-1">
+										<label for="route-day">Day</label>
+									</div>
+									<div class="col-lg-2">
+										<div class="input-group">
+											<input type="number" id="route-day" name="route-day" class="form-control" placeholder="1" min="1" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row justify-content-center">
+									<div class="col-lg-2">
+										<label for="route-map-colour">Route Map Colour</label>
+									</div>
+									<div class="col-lg-8">
+										<div class="input-group">
+											<!--<input type="text" id="route-map-colour" name="route-map-colour" class="form-control">-->
+											<div id="route-map-colour"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row justify-content-center">
+									<div class="col-lg-2">
+										<label for="is-visible">Visible</label>
+									</div>
+									<div class="col-lg-8">
+										<div class="input-group">
+											<input type="checkbox" id="is-visible" name="is-visible" class="form-check-input standard-checkbox">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row justify-content-center">
+									<div class="col-lg-12 text-center">
+										<button type="button" class="btn btn-primary submit wide" data-toggle="modal" data-target="#route-map-area">
+										  Open the map to edit
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-group form-submit-group">
+								<div class="row justify-content-center">
+									<div class="col-lg-12">
+										<button type="button" class="btn btn-primary btn-lg submit">Create</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade route-map-area dark" id="route-map-area" tabindex="-1" role="dialog" aria-labelledby="map-editor-label" aria-hidden="true" data-backdrop="static">
+	  <div class="modal-dialog modal-fw" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="map-editor-label">Edit Route</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div id="route-map">
+						<div class="row justify-content-center">
+							<div class="col-lg-9">
+								<div id="map-area" data-loaded="false">
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="row justify-content-center">
+									<div class="col-lg-12">
+										<div id="route-waypoints">
+											<h5>Route Waypoints</h5>
+											<p>Drag, reorder and add new waypoints</p>
+											<ul class="route-waypoints-list">
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>32.85335, -97.05229</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>33.22966, -98.14584</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>33.78592, -98.20832</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>33.88950, -98.43010</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>34.57788, -98.38840</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>34.72237, -98.40386</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>35.05303, -97.93221</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>35.05303, -97.93221</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>35.05303, -97.93221</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>35.05303, -97.93221</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>35.05303, -97.93221</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>35.053039, -97.93221</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>35.05303, -97.93221</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+												<li>
+													<i class="fas fa-bars drag-handle"></i>
+													<span>35.05303, -97.93221</span>
+													<a href="#" class="delete">
+										   				<i class="fas fa-times"></i>
+										   			</a>
+												</li>
+											</ul>
+											<form id="add-waypoint">
+												<div class="row justify-content-center">
+													<div class="col-lg-12">
+														<button type="button" class="btn btn-success btn-right" id="route-waypoint-add"  data-toggle="modal" data-target="#add-route-waypoints"><i class="fas fa-plus"></i>Add</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-12">
+										<div id="route-markers">
+												<h5>Route Markers</h5>
+												<p>Drag, reorder and add new markers to the map</p>
+												<ul class="route-markers-list">
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>32.85335, -97.05229</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>33.22966, -98.14584</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>33.78592, -98.20832</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>33.88950, -98.43010</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>34.57788, -98.38840</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>34.72237, -98.40386</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.05303, -97.93221</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.05303, -97.93221</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.05303, -97.93221</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.05303, -97.93221</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.05303, -97.93221</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.05303, -97.93221</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.0530, -97.93221</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.05303, -97.93221</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.05303, -97.93221</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+													<li>
+														<i class="fas fa-bars drag-handle"></i>
+														<span>35.05303, -97.93221</span>
+														<a href="#" class="delete">
+											   				<i class="fas fa-times"></i>
+											   			</a>
+													</li>
+												</ul>
+												<form id="add-waymarker">
+													<div class="row justify-content-center">
+														<div class="col-lg-12">
+															<button type="button" class="btn btn-success btn-right" data-toggle="modal" data-target="#add-route-marker">
+																<i class="fas fa-plus"></i>
+																Add
+															</button>
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal fade dark" id="add-route-waypoints" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true" data-backdrop="static">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modal-label">Add New Route Waypoint</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="container-fluid">
+		        <form id="add-marker">
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="title">Title</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="text" class="form-control" id="title" name="title" placeholder="Title" required />
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="latitude">Latitude</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="number" class="form-control" id="latitude" name="latitude" placeholder="Latitude" required />
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="longitude">Longitude</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="number" class="form-control" id="longitude" name="longitude" placeholder="Longitude" required />
+		        			</div>
+		        		</div>
+		        	</div>
+				</form>
+		      </div>
+	  		</div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary" id="add-new-route-waypoint">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal fade dark" id="add-route-marker" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true" data-backdrop="static">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modal-label">Add New Route Marker</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="container-fluid">
+		        <form id="add-marker">
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="title">Title</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="text" class="form-control" id="title" name="title" placeholder="Title" required />
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="title">Text</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<textarea name="add-marker-editor" id="add-marker-editor" rows="10" cols="80">Add some content here</textarea>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="latitude">Latitude</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="number" class="form-control" id="latitude" name="latitude" placeholder="Latitude" required />
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="longitude">Longitude</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="number" class="form-control" id="longitude" name="longitude" placeholder="Longitude" required />
+		        			</div>
+		        		</div>
+		        	</div>
+				</form>
+		      </div>
+	  		</div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary" id="add-new-route-marker">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script src="_includes/jQuery/jquery-3.5.1.min.js"></script>
+	<script src="_includes/bootstrap/js/bootstrap.min.js"></script>
+	<script src="_includes/jQueryUI/jquery-ui.min.js"></script>
+	<script src="_includes/ckeditor/ckeditor.js"></script>
+	<script src="_includes/bootstrap-tags/bootstrap-tagsinput.js"></script>
+	<script src="_includes/fast-select/fastselect.standalone.min.js"></script>
+	<script src="_includes/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="_includes/colorpicker/iro.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+	<script src="js/core.js"></script>
+	<script src="js/modals.js"></script>
+	<script src="js/map.js"></script>
+</body>

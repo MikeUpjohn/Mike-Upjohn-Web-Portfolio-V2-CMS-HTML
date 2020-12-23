@@ -19,7 +19,7 @@
 	font-weight:normal;
 }
 
-.modal.dark p, ul, li, label {
+.modal.dark p, .modal.dark ul, .modal.dark li, .modal.dark label {
 	color: var(--white);
 }
 
