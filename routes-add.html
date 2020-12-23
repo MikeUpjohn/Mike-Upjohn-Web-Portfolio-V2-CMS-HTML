@@ -164,7 +164,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal fade route-map-area" id="route-map-area" tabindex="-1" role="dialog" aria-labelledby="map-editor-label" aria-hidden="true" data-backdrop="static">
+	<div class="modal fade route-map-area dark" id="route-map-area" tabindex="-1" role="dialog" aria-labelledby="map-editor-label" aria-hidden="true" data-backdrop="static">
 	  <div class="modal-dialog modal-fw" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -186,7 +186,7 @@
 								<div class="row justify-content-center">
 									<div class="col-lg-12">
 										<div id="route-waypoints">
-											<h3>Route Waypoints</h3>
+											<h5>Route Waypoints</h5>
 											<p>Drag, reorder and add new waypoints</p>
 											<ul class="route-waypoints-list">
 												<li>
@@ -290,25 +290,18 @@
 											</ul>
 											<form id="add-waypoint">
 												<div class="row justify-content-center">
-													<div class="col-lg-1"></div>
-													<div class="col-lg-4">
-														<input type="text" class="form-control-sm" id="latitude" name="latitude" placeholder="Latitude" required />
-													</div>
-													<div class="col-lg-4">
-														<input type="text" class="form-control-sm" id="longitude" name="longitude" placeholder="Longitude" required />
-													</div>
-													<div class="col-lg-3">
-														<button type="button" class="btn btn-success" id="route-waypoint-add"><i class="fas fa-plus"></i>Add</button>
+													<div class="col-lg-12">
+														<button type="button" class="btn btn-success btn-right" id="route-waypoint-add"  data-toggle="modal" data-target="#add-route-waypoints"><i class="fas fa-plus"></i>Add</button>
 													</div>
 												</div>
 											</form>
 										</div>
 									</div>
 								</div>
-								<div class="row">
+								<div class="row justify-content-center">
 									<div class="col-lg-12">
 										<div id="route-markers">
-												<h3>Route Markers</h3>
+												<h5>Route Markers</h5>
 												<p>Drag, reorder and add new markers to the map</p>
 												<ul class="route-markers-list">
 													<li>
@@ -450,128 +443,73 @@
 	    </div>
 	  </div>
 	</div>
-	<!--<div id="route-map-area" style="display:none;">
-		<div class="container-fluid">
-			<div class="row justify-content-center">
-		        <div class="close-map">
-			        <a href="#" class="delete" id="route-map-close">
-		   				<i class="fas fa-times"></i>
-		   			</a>
-	   			</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-12">
-					<div id="route-map">
-						<div class="row justify-content-center">
-							<div class="col-lg-9">
-								<div id="map-area">
-									1
-								</div>
-							</div>
-							<div class="col-lg-3">
-								<div class="row justify-content-center">
-									<div class="col-lg-12">
-										<div id="route-waypoints">
-											<h3>Route Waypoints</h3>
-											<p>Drag, reorder and add new waypoints</p>
-											<ul class="route-waypoints-list">
-												<li>
-													<i class="fas fa-bars drag-handle"></i>
-													<span>32.853350814049826, -97.05229639641168</span>
-													<a href="#" class="delete">
-										   				<i class="fas fa-times"></i>
-										   			</a>
-												</li>
-												<li>
-													<i class="fas fa-bars drag-handle"></i>
-													<span>33.22966239269321, -98.14584484551459</span>
-													<a href="#" class="delete">
-										   				<i class="fas fa-times"></i>
-										   			</a>
-												</li>
-												<li>
-													<i class="fas fa-bars drag-handle"></i>
-													<span>33.78592398075339, -98.2083201656606</span>
-													<a href="#" class="delete">
-										   				<i class="fas fa-times"></i>
-										   			</a>
-												</li>
-												<li>
-													<i class="fas fa-bars drag-handle"></i>
-													<span>33.889508163353455, -98.4301078670036</span>
-													<a href="#" class="delete">
-										   				<i class="fas fa-times"></i>
-										   			</a>
-												</li>
-												<li>
-													<i class="fas fa-bars drag-handle"></i>
-													<span>34.57788565452161, -98.38840358020855</span>
-													<a href="#" class="delete">
-										   				<i class="fas fa-times"></i>
-										   			</a>
-												</li>
-												<li>
-													<i class="fas fa-bars drag-handle"></i>
-													<span>34.7223748174115, -98.40386094050531</span>
-													<a href="#" class="delete">
-										   				<i class="fas fa-times"></i>
-										   			</a>
-												</li>
-												<li>
-													<i class="fas fa-bars drag-handle"></i>
-													<span>35.053039559921196, -97.9322196301751</span>
-													<a href="#" class="delete">
-										   				<i class="fas fa-times"></i>
-										   			</a>
-												</li>
-											</ul>
-											<form id="add-waypoint">
-												<div class="row justify-content-center">
-													<div class="col-lg-1"></div>
-													<div class="col-lg-4">
-														<input type="text" class="form-control-sm" id="latitude" name="latitude" placeholder="Latitude" required />
-													</div>
-													<div class="col-lg-4">
-														<input type="text" class="form-control-sm" id="longitude" name="longitude" placeholder="Longitude" required />
-													</div>
-													<div class="col-lg-3">
-														<button type="button" class="btn btn-success" id="route-waypoint-add"><i class="fas fa-plus"></i>Add</button>
-													</div>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-12">
-										<div id="route-markers">
-											<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add-route-waymarker"><i class="fas fa-plus"></i>Add</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>-->
-	<!--<div id="route-marker-modal" class="modal" style="display:none;">
-		<div class="row justify-content-center">
-			<a href="#"><i class="fas fa-times close-modal"></i></a>
-		</div>
-		<div class="row justify-content-center">
-			<div class="col-lg-4">
-				<h3>My lovely modal</h3>
-				<p>This is where the modal content will go.</p>
-			</div>
-		</div>
-	</div>-->
+	<div class="modal fade" id="add-route-waypoints" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true" data-backdrop="static">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modal-label">Add New Route Waypoint 2</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="container-fluid">
+		        <form id="add-marker">
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="title">Title</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="text" class="form-control" id="title" name="title" placeholder="Title" required />
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="title">Text</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<textarea name="add-marker-editor" id="add-marker-editor" rows="10" cols="80">Add some content here</textarea>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="latitude">Latitude</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="number" class="form-control" id="latitude" name="latitude" placeholder="Latitude" required />
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="form-group">
+		        		<div class="row justify-content-center">
+		        			<div class="col-lg-2">
+		        				<label for="longitude">Longitude</label>
+		        			</div>
+		        			<div class="col-lg-10">
+								<input type="number" class="form-control" id="longitude" name="longitude" placeholder="Longitude" required />
+		        			</div>
+		        		</div>
+		        	</div>
+				</form>
+		      </div>
+	  		</div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 	<div class="modal fade" id="add-route-marker" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true" data-backdrop="static">
 	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="modal-label">Add New Marker</h5>
+	        <h5 class="modal-title" id="modal-label">Add New Route Marker</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>

@@ -11,12 +11,12 @@
 }
 
 #route-waypoints, #route-markers {
-	background-color:var(--white);
+	background-color: var(--sidenav-background-colour);
 	padding-top:15px;
 	padding-bottom:15px;
 }
 
-#route-waypoints h3, #route-markers h3 {
+#route-waypoints h5, #route-markers h5 {
 	margin-top:0px;
 	margin-left:10px;
 }
@@ -35,14 +35,18 @@
 	margin-left:20px;
 }
 
+#route-waypoints li a, #route-markers li a {
+	float: right;
+    margin-right: 5px;
+}
+
 #route-waypoints input, #add-route-marker input {
 	max-width:100%;
 	border: 1px solid var(--dark-grey);
 }
 
-/**  Temp   **/
-#route-waypoints, #route-markers {
-	border: 1px solid black;
+#route-waypoints button, #route-markers button {
+	margin-right:5px;
 }
 
 /* Override the mCustomScrollbar background rail */

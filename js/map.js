@@ -12,7 +12,7 @@ $(document).ready(function() {
 		if($("#route-waypoints").length > 0) {
 			$("#route-waypoints").mCustomScrollbar({
 				axis: "y",
-				theme: "dark",
+				theme: "light",
 				setHeight: true
 			});
 		}
@@ -20,7 +20,7 @@ $(document).ready(function() {
 		if($("#route-markers").length > 0) {
 			$("#route-markers").mCustomScrollbar({
 				axis: "y",
-				theme: "dark",
+				theme: "light",
 				setHeight: true
 			});
 		}
@@ -32,12 +32,6 @@ $(document).ready(function() {
 		$("#map-area").height(mapHeight);
 		$("#route-waypoints").css("height", mapHeight / 2 + "px");
 		$("#route-markers").css("height", mapHeight / 2 + "px");
-
-		// Route waypoint add button click handler
-		/*$("#route-waypoint-add").click(function(e) {
-			e.preventDefault();
-			console.log("clicked add route waypoint");
-		});*/
 
 		// Route waypoints delete click handler
 		$(".route-waypoints-list li .delete").click(function(e) {
