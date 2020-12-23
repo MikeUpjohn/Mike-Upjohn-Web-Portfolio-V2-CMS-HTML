@@ -12,17 +12,21 @@
 }
 
 .modal.dark .modal-header {
-	border-bottom:1px solid var(--light-grey);
+	border-bottom: 1px solid var(--dark-grey);
 }
 
-.modal.dark .modal-header h5 {
-	font-weight:bold;
+.modal.dark h5 {
+	font-weight:normal;
 }
 
-.modal.dark p, ul, li {
+.modal.dark p, ul, li, label {
 	color: var(--white);
 }
 
 .modal.dark button.close {
 	color: var(--light-grey);
+}
+
+.modal.dark input {
+	background-color:var(--light-grey);
 }

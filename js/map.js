@@ -81,6 +81,17 @@ $(document).ready(function() {
 			console.log("modal shown");
 			initialiseMap();
 		});
+
+		/** Modals **/
+		$("#add-new-route-waypoint").click(function(e) {
+			e.preventDefault();
+			console.log("Add New Route Waypoint clicked.");
+		});
+
+		$("#add-new-route-marker").click(function(e) {
+			e.preventDefault();
+			console.log("Add New Route Marker clicked.");
+		});
 	}
 });
 
