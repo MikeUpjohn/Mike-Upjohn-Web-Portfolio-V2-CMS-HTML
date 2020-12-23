@@ -96,8 +96,8 @@ $(document).ready(function() {
 });
 
 function initialiseMap() {
-	let map = $("#map-area");
-	if(map.data('loaded') == false) {
+	let mapArea = $("#map-area");
+	if(mapArea.data('loaded') == false) {
 		mapboxgl.accessToken = 'pk.eyJ1IjoibWlrZXVwam9obiIsImEiOiJjazk2enRjbHQwODB5M2xtanB6bGtoOW9zIn0.QKZt26yxRxYmzMa6i1RkYQ';
 		map = new mapboxgl.Map({
 			container: 'map-area',
@@ -106,6 +106,6 @@ function initialiseMap() {
 			zoom: 6
 		});
 		
-		map.data('loaded', true);
+		mapArea.data('loaded', true);
 	}
 }
