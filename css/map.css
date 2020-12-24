@@ -36,7 +36,6 @@
 }
 
 #route-waypoints li a, #route-markers li a {
-	float: right;
     margin-right: 5px;
 }
 
@@ -47,6 +46,15 @@
 
 #route-waypoints button, #route-markers button {
 	margin-right:5px;
+}
+
+.waypoint-actions {
+	display:inline-block;
+	float:right;
+}
+
+.waypoint-actions .edit {
+	color:var(--light-grey);
 }
 
 /* Override the mCustomScrollbar background rail */
