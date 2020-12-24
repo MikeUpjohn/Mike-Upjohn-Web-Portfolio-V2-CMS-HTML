@@ -4,6 +4,7 @@
 	position:fixed;
 	background-color:var(--sidenav-background-colour);
 	width:300px;
+	z-index:1;
 }
 
 .logo {
@@ -44,4 +45,17 @@
 	color: var(--menu-link-hover-colour);
 	font-weight: bold;
 	text-decoration: none;
+}
+
+.menu-item .dropdown-icon {
+	float:right;
+	margin-right:20px;
+}
+
+.menu-item .children {
+	margin-left:25px;
+}
+
+.menu-item .children a {
+	width:78%;
 }

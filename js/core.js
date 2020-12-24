@@ -26,13 +26,6 @@ $(document).on("click", ".fstQueryInput, .fstResultItem", function() {
 	$(this).parent().parent().css('box-shadow', 'inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6)');
 });
 
-/*$(document).on("click", ".fstControls", function() {
-	$(this).parent().css('border-color','#66afe9');
-	$(this).parent().css('outline', 0);
-	$(this).parent().css('-webkit-box-shadow', 'inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6)');
-	$(this).parent().css('box-shadow', 'inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6)');
-});*/
-
 $(document).on("focusout", ".fstQueryInput", function(e) {
 	e.preventDefault();
 
@@ -42,3 +35,16 @@ $(document).on("focusout", ".fstQueryInput", function(e) {
 	$(this).parent().parent().css('-webkit-box-shadow', '');
 	$(this).parent().parent().css('box-shadow', '');
 });
+
+$(".has-children").click(function(e) {
+	e.preventDefault();
+
+	var children = $(this).parent().find(".children");
+
+	if(children.is(":visible")) {
+		children.collapse("hide");
+	}
+	else {
+		children.collapse("show");
+	}
+})
