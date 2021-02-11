@@ -8,23 +8,6 @@ $(document).ready(function() {
 			e.preventDefault();
 		});
 
-		// Set these up first, then control height after scrollbars created
-		if($("#route-waypoints").length > 0) {
-			$("#route-waypoints").mCustomScrollbar({
-				axis: "y",
-				theme: "light",
-				setHeight: true
-			});
-		}
-
-		if($("#route-markers").length > 0) {
-			$("#route-markers").mCustomScrollbar({
-				axis: "y",
-				theme: "light",
-				setHeight: true
-			});
-		}
-
 		var mapHeight = $(window).height() - 216; // Arbitrary number to account for the header, footer and padding.
 
 		$("#route-map-area").height($(window).height());

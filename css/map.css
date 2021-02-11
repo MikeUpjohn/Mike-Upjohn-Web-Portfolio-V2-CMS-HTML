@@ -25,6 +25,11 @@
 	margin-left:10px;
 }
 
+#route-waypoints, #route-markers {
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+
 #route-waypoints .route-waypoints-list, #route-markers .route-markers-list {
 	list-style:none;
 }

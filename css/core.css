@@ -144,3 +144,26 @@ button:focus {
 .btn-right {
 	float:right;
 }
+
+/** Scrollbars **/
+::-webkit-scrollbar {
+	width:15px;
+}
+
+::-webkit-scrollbar-track {
+	background:var(--sidenav-background-colour);
+}
+
+::-webkit-scrollbar-thumb {
+	background:#9e9e9e;
+	border: 3px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background:#9e9e9e;
+	border: 3px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+}
